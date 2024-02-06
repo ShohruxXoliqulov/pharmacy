@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('corporations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('pharmacy_id')->constrained();
             $table->string('name');
             $table->string('calculation');
             $table->text('comment');

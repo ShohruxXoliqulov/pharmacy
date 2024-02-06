@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('pharmacies', function (Blueprint $table) {
             $table->id();
             $table->foreignId('region_id')->constrained();
+            $table->foreignId('corporation_id')->constrained();
             $table->foreignId('organization_id')->constrained();
             $table->string('name');
             $table->string('firm_name');
