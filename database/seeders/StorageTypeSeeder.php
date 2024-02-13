@@ -2,16 +2,15 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Storage_type;
 use Illuminate\Database\Seeder;
 
 class StorageTypeSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        //
+        Storage_type::create([
+            'name' => 'freezing',
+        ]);
     }
 }

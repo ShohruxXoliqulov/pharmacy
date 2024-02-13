@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('expireds', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('storage_id')->constrained();
-            $table->foreignId('pharmacy_id')->constrained();
-            $table->foreignId('product_id')->constrained();
+            $table->foreignId('storage_id');
+            $table->foreignId('pharmacy_id');
+            $table->foreignId('product_id');
             $table->integer('quantity');
             $table->timestamps();
         });

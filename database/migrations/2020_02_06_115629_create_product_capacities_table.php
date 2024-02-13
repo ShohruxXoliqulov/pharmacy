@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pharmacyIncomes', function (Blueprint $table) {
+        Schema::create('product_capacities', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('pharmacy_id')->constrained();
-            $table->foreignId('storage_id')->constrained();
-            $table->foreignId('product_id')->constrained();
-            $table->integer('price');
-            $table->integer('quantity');
+            $table->string('capacity');
             $table->timestamps();
         });
     }
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pharmacyIncomes');
+        Schema::dropIfExists('product_capacities');
     }
 };

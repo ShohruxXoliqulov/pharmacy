@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('productType_id')->constrained();
-            $table->foreignId('productCapacity_id')->constrained();
+            $table->foreignId('productType_id');
+            $table->foreignId('productCapacity_id');
             $table->string('product_name');
             $table->integer('price');
             $table->date('expiration_date');

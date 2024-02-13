@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('storages', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('storageType_id')->constrained();
-            $table->foreignId('organization_id')->constrained();
+            $table->foreignId('storageType_id');
+            $table->foreignId('organization_id');
             $table->string('name');
             $table->timestamps();
         });

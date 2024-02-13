@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('storageTypes', function (Blueprint $table) {
+        Schema::create('pharmacy_outlays', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->foreignId('pharmacy_id');
+            $table->foreignId('expired_id');
+            $table->foreignId('product_id');
+            $table->integer('price');
+            $table->integer('quantity');
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('storageTypes');
+        Schema::dropIfExists('pharmacy_outlays');
     }
 };

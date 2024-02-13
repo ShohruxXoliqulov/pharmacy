@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('pharmacies', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('region_id')->constrained();
-            $table->foreignId('corporation_id')->constrained();
-            $table->foreignId('organization_id')->constrained();
+            $table->foreignId('region_id');
+            $table->foreignId('corporation_id');
+            $table->foreignId('organization_id');
             $table->string('name');
             $table->string('firm_name');
             $table->string('owner_name');
-            $table->bigInteger('owner_phone');
-            $table->string('image');
+            $table->string('owner_phone');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('incomes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('storage_id')->constrained();
-            $table->foreignId('product_id')->constrained();
+            $table->foreignId('storage_id');
+            $table->foreignId('product_id');
             $table->integer('quantity');
             $table->timestamps();
         });
